@@ -1,0 +1,51 @@
+//apply plugin: 'com.android.application'
+apply from: "../module.build.gradle"
+apply plugin: 'com.jakewharton.butterknife'
+android {
+
+    defaultConfig {
+        //如果是独立模块，则使用当前组件的包名
+        if (isBuildModule.toBoolean()) {
+            applicationId "com.yuong.comming"
+        }
+    }
+    //统一资源前缀，规范资源引用
+    resourcePrefix "comming_"
+
+//    compileSdkVersion 28
+//    defaultConfig {
+//        applicationId "com.yuong.comming"
+//        minSdkVersion 15
+//        targetSdkVersion 28
+//        versionCode 1
+//        versionName "1.0"
+//
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//
+//    }
+//
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+
+}
+
+dependencies {
+    //组件依赖基础库
+    api project(':library_base')
+    api project(':module_comment')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //组件中依赖阿里路由编译框架
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation rootProject.ext.dependencies["glide-transformations"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

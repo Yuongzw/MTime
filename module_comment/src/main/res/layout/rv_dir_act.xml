@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/dp_2"
+    tools:ignore="ResourceName">
+
+    <TextView
+        android:id="@+id/tv_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="导演"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/iv_personal_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_150"
+        android:layout_marginTop="@dimen/dp_5"/>
+
+    <TextView
+        android:id="@+id/tv_zh_name"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="张立衍"
+        android:layout_marginTop="@dimen/dp_5"/>
+
+    <TextView
+        android:id="@+id/tv_en_name"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="Zhang Liyan"
+        android:layout_marginTop="@dimen/dp_5"/>
+
+    <TextView
+        android:id="@+id/tv_play_name"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="饰:满江"
+        android:layout_marginTop="@dimen/dp_5"/>
+
+</LinearLayout>

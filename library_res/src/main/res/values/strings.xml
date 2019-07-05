@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Library_Res</string>
+    <string name="hot_name">正在售票</string>
+    <string name="coming_name">即将上映</string>
+</resources>

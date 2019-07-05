@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yuong.ticketing">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.yuong.library_base.ContainerActivity" />
+        <activity android:name="com.yuong.module_comment.ui.movie_detail.MovieDetailActivity" />
+        <activity android:name="com.yuong.module_comment.ui.all_person.AllPersonActivity" />
+        <activity android:name="com.yuong.module_comment.ui.actor_experience.ActorExpriencesActivity" />
+        <activity android:name="com.yuong.module_comment.ui.award.AwardActivity" />
+        <activity android:name="com.yuong.module_comment.ui.photo.PhotoActivity" />
+        <activity android:name="com.yuong.module_comment.ui.photo.ImageActivity" />
+        <activity android:name="com.yuong.module_comment.ui.video.VideoActivity" />
+    </application>
+</manifest>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab
+        icon="@drawable/ic_hot"
+        id="@+id/tab_hot"
+        title="正在热映"
+        inActiveColor="#353535"
+        activeColor="#f9f6f6"
+        barColorWhenSelected="#f4be2a"
+         />
+    <tab
+        icon="@drawable/ic_ticket"
+        id="@+id/tab_ticket"
+        title="正在售票"
+        inActiveColor="#353535"
+        activeColor="#f9f6f6"
+        barColorWhenSelected="#fa7d56" />
+    <tab
+        icon="@drawable/ic_coming"
+        id="@+id/tab_coming"
+        title="即将上映"
+        inActiveColor="#353535"
+        activeColor="#f9f6f6"
+        barColorWhenSelected="#5D4037" />
+</tabs>

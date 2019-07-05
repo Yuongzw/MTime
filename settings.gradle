@@ -1,0 +1,1 @@
+include ':app', ':library_base', ':library_res', ':module_ticketing', ':module_hot', ':module_comming', ':module_main', ':module_comment',':jiaozivideoplayerlib'

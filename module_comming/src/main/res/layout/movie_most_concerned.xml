@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="@dimen/dp_10"
+    tools:ignore="ResourceName">
+
+    <TextView
+        android:id="@+id/tv_Release_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03月22日——————"
+        android:padding="@dimen/dp_2"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/hint"/>
+
+    <ImageView
+        android:id="@+id/iv_movie_bg"
+        android:layout_width="140dp"
+        android:layout_height="185dp"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_2"
+        android:text="地久天长"/>
+
+    <TextView
+        android:id="@+id/tv_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="235人想看"
+        android:padding="@dimen/dp_2"
+        android:textColor="@color/hint"/>
+
+
+</LinearLayout>

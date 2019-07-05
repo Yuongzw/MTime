@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_5"
+    android:background="@color/part"
+    tools:ignore="ResourceName">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="演员 Actor"
+        android:layout_gravity="center"
+        android:textSize="@dimen/sp_16"/>
+
+    <ImageView
+        android:id="@+id/iv_fold"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_right"
+        android:rotation="90"
+        android:layout_marginLeft="@dimen/dp_10"/>
+
+</LinearLayout>

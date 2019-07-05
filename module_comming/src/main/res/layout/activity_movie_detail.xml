@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.coming.MovieDetailActivity"
+    tools:ignore="ResourceName">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_movie_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="80分钟"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.45"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_movie_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="动画"
+                    app:layout_constraintStart_toStartOf="@+id/tv_movie_min"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_movie_min" />
+
+                <TextView
+                    android:id="@+id/tv_release_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:text="2019年03月16日中国上映"
+                    app:layout_constraintStart_toStartOf="@+id/tv_movie_type"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_movie_type" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:elevation="@dimen/dp_5"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_release_date">
+
+                    <com.yuong.library_base.widget.FoldableTextView
+                        android:id="@+id/tv_story"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_15"
+                        android:background="@color/part" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/dp_5">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_director_actor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_2" />
+
+                        <TextView
+                            android:id="@+id/tv_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:padding="@dimen/dp_5"
+                            android:text="全部 >"
+                            android:textColor="@color/hint" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_15"
+                        android:background="@color/part" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_10"
+                            android:layout_weight="0.9"
+                            android:orientation="vertical"
+                            tools:ignore="Suspicious0dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_video"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp_5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="视频"
+                                    android:textSize="@dimen/sp_16" />
+
+                                <TextView
+                                    android:id="@+id/tv_video_num"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="14 >" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_video"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_100"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:layout_below="@+id/ll_video"
+                                android:scaleType="fitXY"/>
+
+                            <ImageView
+                                android:id="@+id/iv_play2"
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="65dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_play" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/dp_100"
+                            android:layout_marginTop="47dp"
+                            android:background="@color/hint" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_10"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_weight="0.7"
+                            android:orientation="vertical"
+                            tools:ignore="Suspicious0dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp_5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="图片"
+                                    android:textSize="@dimen/sp_16" />
+
+                                <TextView
+                                    android:id="@+id/tv_photo_num"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="14 >" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_100"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:scaleType="fitXY"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_width="120dp"
+                android:layout_height="165dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_alignParentLeft="true"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:padding="1dp"
+                android:background="@drawable/bg_border"
+                tools:ignore="NotSibling" />
+
+            <ImageView
+                android:id="@+id/iv_play1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_play"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="46dp" />
+
+            <TextView
+                android:id="@+id/tv_zh_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="极限特工：终极回归"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/iv_img"
+                android:textSize="@dimen/sp_18"
+                 />
+
+            <TextView
+                android:id="@+id/tv_en_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_zh_name"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="33dp"
+                android:text="xXx: The Return of Xander Cage"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/title_bar" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/iv_award_img"
+        android:layout_width="70dp"
+        android:layout_height="@dimen/dp_100" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_award_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            android:layout_margin="@dimen/dp_5"
+            android:text="MTV电影奖"/>
+
+        <TextView
+            android:id="@+id/tv_award_en_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:textColor="@color/hint"
+            android:textSize="@dimen/sp_14"
+            android:text="MTV Movie Awards"/>
+
+        <TextView
+            android:id="@+id/tv_award_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            android:layout_margin="@dimen/dp_5"
+            android:text="获奖1次，提名5次"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_fold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:rotation="180"
+        android:src="@drawable/ic_fold"/>
+
+</LinearLayout>
